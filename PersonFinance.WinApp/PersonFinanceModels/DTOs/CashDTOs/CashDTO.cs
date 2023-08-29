@@ -1,6 +1,5 @@
 using PersonFinance.WinApp.PersonFinanceModels.ObjectValues;
 using System;
-using System.ComponentModel;
 
 namespace PersonFinance.WinApp.PersonFinanceModels.DTOs
 {

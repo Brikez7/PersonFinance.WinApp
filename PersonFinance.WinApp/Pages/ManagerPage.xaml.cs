@@ -1,4 +1,5 @@
 ﻿using PersonFinance.WinApp.ClientsWebAPI;
+using PersonFinance.WinApp.Excel;
 using PersonFinance.WinApp.ModalWindows;
 using PersonFinance.WinApp.Pages;
 using PersonFinance.WinApp.PersonFinanceModels;
@@ -37,7 +38,8 @@ namespace PersonFinance.WinApp
         }
         protected override void GetExcel_Click(object sender, RoutedEventArgs e)
         {
-
+            var excelReport = new ExcelReport<TModelDTO>();
+            excelReport.FormReportExcel(GridEntities.ItemsSource.Cast<TModelDTO>().AsEnumerable());
         }
 
         protected override void ButtonAdd_Click(object sender, RoutedEventArgs e)
