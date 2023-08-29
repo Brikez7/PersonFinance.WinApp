@@ -55,7 +55,7 @@
               VerticalAlignment="Center"
               ToolTip="Resource name: MaterialDesignPaperLightButton" SelectionChanged="ChoicePage_SelectionChanged"/>
         </Viewbox>
-        <Frame x:Name="MainPage" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="4" Margin="50" Navigated="MainPage_Navigated"></Frame>
+        <Frame x:Name="MainPage" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="4" Margin="25" Navigated="MainPage_Navigated"></Frame>
         <Viewbox Stretch="Uniform" Grid.Column="0" Grid.Row="3" Margin="100"/>
     </Grid>
 </mah:MetroWindow>

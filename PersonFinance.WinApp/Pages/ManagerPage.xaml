@@ -8,11 +8,13 @@
       Title="ChartsPage" Background="AliceBlue" Width="1340" Height="964">
 
     <Grid>
-        <DataGrid x:Name="GridEntities" Margin="0,0,0,150"  ></DataGrid>
-        <Button Height="30" Width="172" x:Name="ButtonUpdate" Content="Update" Margin="120,0,0,60" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonUpdate_Click"></Button>
-        <Button Height="30" Width="172" x:Name="ButtonAdd" Content="Add" Margin="352,0,0,60" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonAdd_Click" ></Button>
-        <Button Height="30" Width="172" x:Name="ButtonDelete" Content="Delete" Margin="0,0,584,60" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="ButtonDelete_Click"></Button>
-        <Button Height="30" Width="172" x:Name="ButtonRefresh" Content="Refresh table" Margin="0,0,352,60" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="ButtonRefresh_Click_1"></Button>
-        <Button Height="30" Width="172" x:Name="GetExcel" Content="Load to excel" Margin="0,0,120,60" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="GetExcel_Click"></Button>
+        <DataGrid x:Name="GridEntities" Margin="0,0,0,170" CurrentCellChanged="GridEntities_CurrentCellChanged"></DataGrid>
+        <Button Height="30" Width="172" x:Name="ButtonSum" Content="Sum" Margin="120,0,0,110" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonSum_Click"></Button>
+        <TextBox x:Name="BRSumView" Height="30" Width="172" Text="0" Margin="120,0,0,70" IsEnabled="False" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Center"></TextBox>
+        <Button Height="30" Width="172" x:Name="ButtonUpdate" Content="Update" Margin="120,0,0,20" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonUpdate_Click"></Button>
+        <Button Height="30" Width="172" x:Name="ButtonAdd" Content="Add" Margin="352,0,0,20" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonAdd_Click" ></Button>
+        <Button Height="30" Width="172" x:Name="ButtonDelete" Content="Delete" Margin="0,0,584,20" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="ButtonDelete_Click"></Button>
+        <Button Height="30" Width="172" x:Name="ButtonRefresh" Content="Refresh table" Margin="0,0,352,20" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="ButtonRefresh_Click_1"></Button>
+        <Button Height="30" Width="172" x:Name="GetExcel" Content="Load to excel" Margin="0,0,120,20" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="GetExcel_Click"></Button>
     </Grid>
 </Page>
