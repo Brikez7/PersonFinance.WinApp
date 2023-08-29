@@ -1,0 +1,54 @@
+﻿<Window x:Class="PersonFinance.WinApp.ModalWindows.BankingAccountWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersonFinance.WinApp.ModalWindows" 
+        xmlns:local1="clr-namespace:PersonFinance.WinApp.PersonFinanceModels"
+        xmlns:model="clr-namespace:PersonFinance.WinApp.PersonFinanceModels.ViewModels"
+        mc:Ignorable="d"
+        Title="BankingAccountWindow" Height="450" Width="800">
+    
+    <Window.Resources>
+        <model:ModelBankingAccountDTO x:Key="model"/>
+    </Window.Resources>
+    
+    <Grid DataContext="{StaticResource model}">
+        <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="1" Content="User Name:"/>
+        <TextBox x:Name="BUserName" Text="{Binding UserName}" Grid.Row="1" Grid.Column="1"/>
+
+        <Label Grid.Row="2" Content="Bank Name:"/>
+        <TextBox x:Name="BBankName" Text="{Binding BankName}" Grid.Row="2" Grid.Column="1"/>
+
+        <Label Grid.Row="3" Content="Date Start:" />
+        <DatePicker x:Name="PDateStart" SelectedDate="{Binding DateStart}" DisplayDateStart="01.01.2000" DisplayDateEnd="01.01.2100" Grid.Row="3" Grid.Column="1"/>
+    
+        <Label Grid.Row="4" Content="Date End:" />
+        <DatePicker x:Name="PDateEnd" Grid.Row="4" SelectedDate="{Binding DateEnd}" Grid.Column="1"/>
+
+        <Label Grid.Row="5" Content="Interest Rate:" />
+        <TextBox x:Name="BInterestRate" Grid.Row="5" Text="{Binding InterestRate}"  Grid.Column="1"/>
+
+        <Label Grid.Row="6" Content="Money:" />
+        <local1:MoneyControl x:Name="BankingMoney" Margin="0,20,0,20" Grid.Row="6" Grid.Column="1" />
+
+        <Button x:Name="ButtonCommand" Width="400" BorderBrush="Black" Margin="0,40,0,40" Grid.Row="8" Grid.Column="2" Content="" Click="ButtonCommand_Click" />
+    </Grid>
+</Window>

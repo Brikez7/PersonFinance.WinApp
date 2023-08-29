@@ -1,0 +1,64 @@
+﻿<Window x:Class="PersonFinance.WinApp.ModalWindows.ContractWindowUpdate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersonFinance.WinApp.ModalWindows" xmlns:local1="clr-namespace:PersonFinance.WinApp.PersonFinanceModels"
+        mc:Ignorable="d"
+        Title="ContractWindowUpdate" Height="600" Width="800"        
+        xmlns:model="clr-namespace:PersonFinance.WinApp.PersonFinanceModels.ViewModels">
+
+    <Window.Resources>
+        <model:ModelContractDTO x:Key="model"/>
+    </Window.Resources>
+
+    <Grid DataContext="{StaticResource model}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="1" Content="User Name:" />
+        <TextBox x:Name="BUserName" Grid.Row="1" Text="{Binding UserName}" Grid.Column="1"/>
+
+        <Label Grid.Row="2" Content="Other Person:" />
+        <TextBox x:Name="BOtherPerson" Grid.Row="2" Text="{Binding OtherPerson}" Grid.Column="1"/>
+
+        <Label Grid.Row="3" Content="Receipt Date:" />
+        <DatePicker x:Name="PReceiptDate" Grid.Row="3" SelectedDate="{Binding ReceiptDate}" Grid.Column="1"/>
+
+        <Label Grid.Row="4" Content="Interest Rate:" />
+        <TextBox x:Name="BInterestRate" Grid.Row="4" Text="{Binding InterestRate}" Grid.Column="1" />
+
+        <Label Grid.Row="5" Content="Money Credit:" />
+        <local1:MoneyControl x:Name="MoneyCredit" Height="170" Grid.Row="5" Grid.Column="1"  />
+
+        <Label Grid.Row="6" Content="Returned:"/>
+        <CheckBox x:Name="CReturned" Grid.Row="6" IsChecked="{Binding Returned}" Grid.Column="1"/>
+
+        <Label Grid.Row="7" Content="Returned Date:" />
+        <DatePicker x:Name="PReturnedDate" Grid.Row="7" SelectedDate="{Binding ReturnedDate}" Grid.Column="1"/>
+
+        <Label Grid.Row="8" Content="Returned Money:" />
+        <local1:MoneyControl x:Name="ReturnedMoney" Height="170" Grid.Row="8" Grid.Column="1" />
+
+        <Label Grid.Row="9" Content="Type Contract:" />
+        <ComboBox x:Name="CTypeContract" Grid.Row="9" Grid.Column="1" SelectedValue="{Binding TypeContract}"></ComboBox>
+
+        <Button x:Name="ButtonCommand" Grid.Row="10" Grid.Column="2" Content="Update" Width="400" Margin="0,20,0,0" BorderBrush="Black" Click="Button_Click"/>
+    </Grid>
+</Window>

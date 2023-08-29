@@ -1,12 +1,61 @@
-﻿<Window x:Class="PersonFinance.WinApp.MainWindow"
+﻿<mah:MetroWindow  
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="PersonFinance.WinApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PersonFinance.WinApp"
+        xmlns:local="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="PersonFinance" WindowState="Maximized" Height="1080" Width="1920">
 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.Column="0" Grid.RowSpan="1000">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="LightBlue">
+                </SolidColorBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Viewbox Stretch="Uniform" Grid.Column="0" Grid.Row="0" Margin="100">
+            <Button x:Name="ButtonChangesTables"
+              Width="213" Height="32" HorizontalAlignment="Center" 
+              VerticalAlignment="Center" Content="Редактирование таблиц"
+              ToolTip="Resource name: MaterialDesignPaperLightButton" Click="ButtonChangesTables_Click"/>
+        </Viewbox>
+
+        <Viewbox Stretch="Uniform" Grid.Column="0" Grid.Row="1" Margin="100">
+            <Button x:Name="ButtonOpenCharts"
+              Width="190" Height="27" HorizontalAlignment="Center" 
+              VerticalAlignment="Center" Content="Графики"
+              ToolTip="Resource name: MaterialDesignPaperLightButton" Click="OpenCharts_Click"/>
+        </Viewbox>
+
+        <Viewbox Stretch="Uniform" Grid.Column="0" Grid.Row="2" Margin="100">
+            <Button x:Name="ButtonOpentOverallResults"
+              Width="190" Height="27" HorizontalAlignment="Center" 
+              VerticalAlignment="Center" Content="Обшие итоги"
+              ToolTip="Resource name: MaterialDesignPaperLightButton" Click="OverallResultsPage_Click"/>
+        </Viewbox>
+        <Viewbox Stretch="Uniform" Grid.Column="0" Grid.Row="3" Margin="100" Name="Choies">
+            <ComboBox Name="ChoicePage" 
+              Width="190" Height="27" HorizontalAlignment="Center" 
+              VerticalAlignment="Center"
+              ToolTip="Resource name: MaterialDesignPaperLightButton" SelectionChanged="ChoicePage_SelectionChanged"/>
+        </Viewbox>
+        <Frame x:Name="MainPage" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="4" Margin="50" Navigated="MainPage_Navigated"></Frame>
+        <Viewbox Stretch="Uniform" Grid.Column="0" Grid.Row="3" Margin="100"/>
     </Grid>
-</Window>
+</mah:MetroWindow>

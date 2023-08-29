@@ -1,0 +1,18 @@
+﻿<Page x:Class="PersonFinance.WinApp.ManagerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PersonFinance.WinApp"
+      mc:Ignorable="d" 
+      Title="ChartsPage" Background="AliceBlue" Width="1340" Height="964">
+
+    <Grid>
+        <DataGrid x:Name="GridEntities" Margin="0,0,0,150"  ></DataGrid>
+        <Button Height="30" Width="172" x:Name="ButtonUpdate" Content="Update" Margin="120,0,0,60" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonUpdate_Click"></Button>
+        <Button Height="30" Width="172" x:Name="ButtonAdd" Content="Add" Margin="352,0,0,60" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonAdd_Click" ></Button>
+        <Button Height="30" Width="172" x:Name="ButtonDelete" Content="Delete" Margin="0,0,584,60" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="ButtonDelete_Click"></Button>
+        <Button Height="30" Width="172" x:Name="ButtonRefresh" Content="Refresh table" Margin="0,0,352,60" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="ButtonRefresh_Click_1"></Button>
+        <Button Height="30" Width="172" x:Name="GetExcel" Content="Load to excel" Margin="0,0,120,60" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="GetExcel_Click"></Button>
+    </Grid>
+</Page>

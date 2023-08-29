@@ -1,4 +1,4 @@
-﻿namespace PersonFinance.WinApp.PersonFinanceModels.Enums
+﻿namespace PersonFinance.WinApp.PersonFinanceModels
 {
     public enum TypeContract
     {

@@ -4,6 +4,6 @@
     {
         public virtual T? Data { get; set; }
         public virtual ServiceCode ServiceCode { get; set; }
-        public virtual string? Message { get; set; }
+        public virtual string? Message { get; set; } 
     }
 }

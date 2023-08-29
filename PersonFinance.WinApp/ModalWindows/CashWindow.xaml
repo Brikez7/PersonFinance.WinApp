@@ -1,0 +1,21 @@
+﻿<Window x:Class="PersonFinance.WinApp.PersonFinanceModels.CashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersonFinance.WinApp.PersonFinanceModels"
+        mc:Ignorable="d"
+        Title="CashAdd" Height="450" Width="800"
+        xmlns:model="clr-namespace:PersonFinance.WinApp.PersonFinanceModels.ViewModels">
+
+    <Window.Resources>
+        <model:ModelCashDTO x:Key="model"/>
+    </Window.Resources>
+    
+    <Grid DataContext="{StaticResource model}">
+        <local:MoneyControl x:Name="MoneyCash" Width="200" Height="160" Margin="0,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"></local:MoneyControl>
+        <Label Height="25" Width="200" Margin="0,230,0,0" BorderBrush="Black" Background="White" Content="Имя пользователя" HorizontalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <TextBox x:Name="BUserName" Height="25" Width="200" Margin="0,280,0,0" BorderBrush="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Text="{Binding UserName}"/>
+        <Button x:Name="ButtonCommand" Height="25" Width="240" Margin="0,330,0,0" BorderBrush="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Content="" Click="Button_Click"></Button>
+    </Grid>
+</Window>

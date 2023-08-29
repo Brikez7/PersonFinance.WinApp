@@ -6,6 +6,10 @@
         public override ServiceCode ServiceCode { get; set; } = ServiceCode.Ok;
         public override T? Data { get; set; }
 
+        public StandardResponse()
+        {
+        }
+
         public StandardResponse(T? data)
         {
             Data = data;

@@ -9,6 +9,10 @@ namespace PersonFinance.WinApp.PersonFinanceModels.ObjectValues
             Amount = amount;
             Currency = currency;
         }
+        public override string ToString()
+        {
+            return $"{Amount} {Currency}";
+        }
     }
     public enum Currency
     {
