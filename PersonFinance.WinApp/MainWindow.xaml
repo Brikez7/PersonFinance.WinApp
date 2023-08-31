@@ -43,19 +43,14 @@
               ToolTip="Resource name: MaterialDesignPaperLightButton" Click="OpenCharts_Click"/>
         </Viewbox>
 
-        <Viewbox Stretch="Uniform" Grid.Column="0" Grid.Row="2" Margin="100">
-            <Button x:Name="ButtonOpentOverallResults"
-              Width="190" Height="27" HorizontalAlignment="Center" 
-              VerticalAlignment="Center" Content="Обшие итоги"
-              ToolTip="Resource name: MaterialDesignPaperLightButton" Click="OverallResultsPage_Click"/>
-        </Viewbox>
+        <Viewbox Stretch="Uniform" Grid.Column="0" Grid.Row="2" Margin="100"/>
         <Viewbox Stretch="Uniform" Grid.Column="0" Grid.Row="3" Margin="100" Name="Choies">
             <ComboBox Name="ChoicePage" 
               Width="190" Height="27" HorizontalAlignment="Center" 
               VerticalAlignment="Center"
               ToolTip="Resource name: MaterialDesignPaperLightButton" SelectionChanged="ChoicePage_SelectionChanged"/>
         </Viewbox>
-        <Frame x:Name="MainPage" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="4" Margin="25" Navigated="MainPage_Navigated"></Frame>
+        <Frame x:Name="MainPage" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="4" Margin="25"></Frame>
         <Viewbox Stretch="Uniform" Grid.Column="0" Grid.Row="3" Margin="100"/>
     </Grid>
 </mah:MetroWindow>

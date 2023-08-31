@@ -2,9 +2,9 @@
 using System;
 using PersonFinance.WinApp.PersonFinanceModels.ObjectValues;
 
-namespace PersonFinance.WinApp
+namespace PersonFinance.WinApp.Helpers
 {
-    public static class TypeHelper
+    public static class TypeEx
     {
         private static readonly HashSet<Type> NumericTypes = new HashSet<Type>
         {

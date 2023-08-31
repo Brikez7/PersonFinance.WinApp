@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace PersonFinance.WinApp.PersonFinanceModels.DTOs
 {
@@ -22,6 +23,10 @@ namespace PersonFinance.WinApp.PersonFinanceModels.DTOs
             var _ when typeof(ModelDTO) == typeof(InvestAccountDTO) && index == 5 => $"{models.Cast<InvestAccountDTO>().Where(x => x.Money.Currency == currency).Sum(x => x.Money.Amount)} {currency}",
             var _ when typeof(ModelDTO) == typeof(InvestAccountDTO) && index == 4 => $"{models.Cast<InvestAccountDTO>().Sum(x => x.InterestRate)}",
             _ => throw new NotImplementedException("this type not supposed"),
-        };        
+        };
+        public static bool WhereDate(DateTimeOffset expression, DateTimeOffset currentPast, DateTimeOffset currentFuture)
+        {
+            return currentPast < expression && expression < currentFuture;
+        }
     }
 }

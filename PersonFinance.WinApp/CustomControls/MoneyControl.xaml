@@ -5,12 +5,16 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PersonFinance.WinApp.PersonFinanceModels"
              mc:Ignorable="d" 
-             d:Height="170" d:Width="210">
+             d:Height="170" d:Width="210"        
+             xmlns:model="clr-namespace:PersonFinance.WinApp.PersonFinanceModels.ViewModels">
 
-    <Grid>
+    <UserControl.Resources>
+        <model:ModelMoneyObject x:Key="model"/>
+    </UserControl.Resources>
+    <Grid DataContext="{StaticResource model}">
         <Label x:Name="LAmount" Height="25" Width="200" BorderBrush="Black" Background="White" HorizontalContentAlignment="Center" Content="Колличетсво" Margin="0,-130,0,0"/>
-        <TextBox x:Name="BAmount" Height="25" Width="200" BorderBrush="Black" Margin="0,-40,0,0" Text="{Binding Amount, RelativeSource={RelativeSource AncestorType=UserControl}}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="BAmount" Height="25" Width="200" BorderBrush="Black" Margin="0,-40,0,0" Text="{Binding Amount}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Label x:Name="LCurrency" Height="25" Width="200" BorderBrush="Black" HorizontalContentAlignment="Center" Margin="0,40,0,0" Content="Валюта" Background="White"/>
-        <ComboBox x:Name="CCurrency" Height="25" Width="200" BorderBrush="Black" Margin="0,130,0,0" Text="{Binding Currency, RelativeSource={RelativeSource AncestorType=UserControl}}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ComboBox x:Name="CCurrency" Height="25" Width="200" BorderBrush="Black" Margin="0,130,0,0" Text="{Binding Currency}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </UserControl>

@@ -1,4 +1,5 @@
 ﻿using PersonFinance.WinApp.ClientsWebAPI;
+using PersonFinance.WinApp.Helpers;
 using PersonFinance.WinApp.PersonFinanceModels.DTOs;
 using PersonFinance.WinApp.PersonFinanceModels.ViewModels;
 using System.Threading;

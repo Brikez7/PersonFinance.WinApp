@@ -11,6 +11,7 @@
     <PackageReference Include="EPPlus" Version="6.2.8" />
     <PackageReference Include="MahApps.Metro" Version="2.4.10" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="OxyPlot.Wpf" Version="2.1.2" />
   </ItemGroup>
 
   <ItemGroup>

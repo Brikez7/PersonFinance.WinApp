@@ -9,12 +9,26 @@
 
     <Grid>
         <DataGrid x:Name="GridEntities" Margin="0,0,0,170" CurrentCellChanged="GridEntities_CurrentCellChanged"></DataGrid>
+        
         <Button Height="30" Width="172" x:Name="ButtonSum" Content="Sum" Margin="120,0,0,110" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonSum_Click"></Button>
         <TextBox x:Name="BRSumView" Height="30" Width="172" Text="0" Margin="120,0,0,70" IsEnabled="False" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Center"></TextBox>
         <Button Height="30" Width="172" x:Name="ButtonUpdate" Content="Update" Margin="120,0,0,20" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonUpdate_Click"></Button>
+
+        <Button Height="30" Width="172" x:Name="ButtonViewsWeek" Content="Results for the week" Margin="352,0,0,110" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonViewsWeek_Click"></Button>
+        <Button Height="30" Width="172" x:Name="ButtonViewsYear" Content="Results for the year" Margin="352,0,0,65" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonViewsYear_Click"></Button>
         <Button Height="30" Width="172" x:Name="ButtonAdd" Content="Add" Margin="352,0,0,20" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonAdd_Click" ></Button>
+
+        <Button Height="30" Width="172" x:Name="ButtonViewsMonth" Content="Results for the month"  Margin="0,0,584,110" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="ButtonViewsMonth_Click"></Button>
+        <Button Height="30" Width="172" x:Name="ButtonViewsDashboard" Content="Results for the all time"  Margin="0,0,584,65" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="ButtonViewsDashboard_Click"></Button>
         <Button Height="30" Width="172" x:Name="ButtonDelete" Content="Delete" Margin="0,0,584,20" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="ButtonDelete_Click"></Button>
+
+        <Button Height="30" Width="172" x:Name="ButtonNetProfit" Content="Net profit"  Margin="0,0,352,110" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="ButtonNetProfit_Click"></Button>
+        <TextBox Height="30" Width="172" x:Name="RBNetProfit"  Text="0" Margin="120,0,352,70" IsEnabled="False" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" TextAlignment="Center"></TextBox>
         <Button Height="30" Width="172" x:Name="ButtonRefresh" Content="Refresh table" Margin="0,0,352,20" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="ButtonRefresh_Click_1"></Button>
+
+
+        <Button Height="30" Width="172" x:Name="ButtonBalance" Content="Check balance"  Margin="0,0,120,110" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="ButtonBalance_Click"></Button>
+        <TextBox Height="30" Width="172" x:Name="RBBalance"  Text="0" Margin="120,0,120,70" IsEnabled="False" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" TextAlignment="Center"></TextBox>
         <Button Height="30" Width="172" x:Name="GetExcel" Content="Load to excel" Margin="0,0,120,20" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="GetExcel_Click"></Button>
     </Grid>
 </Page>

@@ -4,6 +4,8 @@ using PersonFinance.WinApp.PersonFinanceModels.ViewModels;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using PersonFinance.WinApp.PersonFinanceModels.ObjectValues;
+using PersonFinance.WinApp.Helpers;
 
 namespace PersonFinance.WinApp.PersonFinanceModels
 {

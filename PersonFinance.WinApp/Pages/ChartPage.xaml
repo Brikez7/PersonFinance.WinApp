@@ -1,0 +1,15 @@
+﻿<Page x:Class="PersonFinance.WinApp.Pages.ChartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PersonFinance.WinApp.Pages" xmlns:oxy="http://oxyplot.org/wpf"
+      mc:Ignorable="d" 
+      Width="1340" Height="964"
+      Title="ChartPage">
+
+    <Grid>
+        <oxy:PlotView x:Name="plotView" Width="1250" Height="854" Margin="0,0,0,90"/>
+        <Button Height="30" Width="172" x:Name="ButtonCreateCharts" Content="Create Charts" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,50" Click="ButtonCreateCharts_Click"></Button>
+    </Grid>
+</Page>

@@ -5,7 +5,7 @@ using NonGenerateManagerPage = PersonFinance.WinApp.ManagerPage;
 
 namespace PersonFinance.WinApp.Pages
 {
-    public class FabricPages
+    public static class FabricPages
     {
         public static NonGenerateManagerPage CreateManagerPage(TypeModel typeModel)
             => typeModel switch

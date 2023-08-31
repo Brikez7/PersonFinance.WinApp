@@ -11,7 +11,7 @@ namespace PersonFinance.WinApp.Excel
 {
     public class ExcelReport<ModelDTO> where ModelDTO : BaseDTO
     {
-        private static char[] _alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
+        private static readonly char[] _alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
         static ExcelReport() { ExcelPackage.LicenseContext = ExcelLicenseContext.NonCommercial; }
 
         private ExcelWorksheet _sheet;
